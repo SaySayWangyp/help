@@ -81,7 +81,7 @@ TODO
 
 ### 返回结果
 TODO
-
+<!--
 ## POST /speech
 ### 功能介绍
 从音频文件中识别中文文本，并中文自然语言文本提取实体和意图，并利用知识图谱为用户提供信息增值服务。
@@ -156,8 +156,6 @@ $ curl -i -F "bits=your_file_bits" -F "rate=your_file_rate" -F "app_key=YOURAPPK
 ````
 同Get /message接口返回结果
 ````
-
-<!--
 
 ## POST /feedback
 ### 功能介绍
