@@ -41,7 +41,7 @@ curl 'http://action.ruyi.ai/xmly/search?q=%E7%BD%97%E8%BE%91%E6%80%9D%E7%BB%B4'
 
 返回结果示例
 <!--<h3 id="-4">返回结果示例</h3>-->
-
+```
     {
 	"code": 0,
 	"msg": "成功",
@@ -105,7 +105,7 @@ curl 'http://action.ruyi.ai/xmly/search?q=%E7%BD%97%E8%BE%91%E6%80%9D%E7%BB%B4'
 		"match_rule": "match"
 	}
 }
-
+```
 
 
 ### 成语接龙 action 功能介绍
@@ -149,6 +149,7 @@ curl 'http://action.ruyi.ai/chengyujielong/play?q=%E4%B8%80%E5%B8%86%E9%A3%8E%E9
 
 返回结果示例
 <!--<h3 id="-4">返回结果示例</h3>-->
+```
 {
 	"code": 0,
 	"msg": "成功",
@@ -164,7 +165,7 @@ curl 'http://action.ruyi.ai/chengyujielong/play?q=%E4%B8%80%E5%B8%86%E9%A3%8E%E9
 		"prevChengyu": "顺水推舟"
 	}
 }
-
+```
 
 ### 词语接龙 action 功能介绍
 所属领域服务：
@@ -207,6 +208,7 @@ curl 'http://action.ruyi.ai/ciyujielong/play?q=%E8%8B%B9%E6%9E%9C'
 
 返回结果示例
 <!--<h3 id="-4">返回结果示例</h3>-->
+```
 {
 	"code": 0,
 	"msg": "成功",
@@ -220,6 +222,7 @@ curl 'http://action.ruyi.ai/ciyujielong/play?q=%E8%8B%B9%E6%9E%9C'
 		"prevCiyu": "果汁"
 	}
 }
+```
 
 ### 查天气 action 功能介绍
 所属领域服务：查询天气
@@ -268,6 +271,7 @@ curl 'http://lab.ruyi.ai/ruyi-action/weather2?city=%E4%B8%8A%E6%B5%B7&date=%E4%B
 
 返回结果示例
 <!--<h3 id="-4">返回结果示例</h3>-->
+```
 {
 	"code": 0,
 	"msg": "成功",
@@ -563,7 +567,7 @@ curl 'http://lab.ruyi.ai/ruyi-action/weather2?city=%E4%B8%8A%E6%B5%B7&date=%E4%B
 		"week_day": "星期六"
 	}
 }
-
+```
 
 ### 翻译 action 功能介绍
 所属领域服务：
@@ -618,6 +622,7 @@ curl 'http://lab.ruyi.ai/ruyi-action/baidu/translate?q=I%20love%20you'
 
 返回结果示例
 <!--<h3 id="-4">返回结果示例</h3>-->
+```
 {
 	"code": 0,
 	"msg": "成功",
@@ -630,6 +635,7 @@ curl 'http://lab.ruyi.ai/ruyi-action/baidu/translate?q=I%20love%20you'
 		}]
 	}
 }
+```
 
 ### 娱乐推送 action 功能介绍
 所属领域服务：娱乐推送
@@ -684,6 +690,7 @@ curl 'http://lab.ruyi.ai/ruyi-action/xxhh'
 
 返回结果示例
 <!--<h3 id="-4">返回结果示例</h3>-->
+```
 {
 	"code": 0,
 	"msg": "成功",
@@ -696,6 +703,7 @@ curl 'http://lab.ruyi.ai/ruyi-action/xxhh'
 		"id": "283383"
 	}
 }
+```
 
 ### 美图搜搜 action 功能介绍
 所属领域服务：美图搜搜
@@ -738,6 +746,7 @@ curl 'http://lab.ruyi.ai/ruyi-action/image/word?word=%E5%88%9D%E9%9F%B3'
 
 返回结果示例
 <!--<h3 id="-4">返回结果示例</h3>-->
+```
 {
 	"code": 0,
 	"msg": "成功",
@@ -746,6 +755,7 @@ curl 'http://lab.ruyi.ai/ruyi-action/image/word?word=%E5%88%9D%E9%9F%B3'
 		"type": "image"
 	}
 }
+```
 
 
 ### 星座知识 action 功能介绍
@@ -795,6 +805,7 @@ curl 'http://lab.ruyi.ai/ruyi-action/constellation/knowledge?constellation=%E6%B
 
 返回结果示例
 <!--<h3 id="-4">返回结果示例</h3>-->
+```
 {
 	"code": 0,
 	"msg": "成功",
@@ -897,3 +908,4 @@ curl 'http://lab.ruyi.ai/ruyi-action/constellation/knowledge?constellation=%E6%B
 		"constellation_name": "双子座"
 	}
 }
+```
