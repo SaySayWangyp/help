@@ -1,7 +1,7 @@
 ## GET /action
 
 ### 搜索有声资源action 
-所属领域服务：有声资源
+所属领域服务：有声资源v0.2
 
 ### 服务地址
 
@@ -107,125 +107,8 @@ curl 'http://action.ruyi.ai/xmly/search?q=%E7%BD%97%E8%BE%91%E6%80%9D%E7%BB%B4'
 }
 ```
 
-
-### 成语接龙 action 功能介绍
-所属领域服务：
-
-### 服务地址
-
-<pre>
-http://action.ruyi.ai/chengyujielong/play
-</pre>
-
-### 输入参数
-
-<ul>
-<li>注意，所有字符串参数需要 URL-encoded.</li>
-</ul>
-
-<table  class="table-responsive border">
-  <thead>
-    <tr>
-      <th>参数</th>
-      <th nowrap="nowrap">参数类型</th>
-      <th nowrap="nowrap">是否必须</th>
-      <th>含义</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-    <td>q</td>
-    <td>String</td>
-    <td>是</td>
-    <td>输入文本（成语)</td>
-   </tr>
-  </tbody>
-</table>
-
-
-
-### 服务调用示例
-curl 'http://action.ruyi.ai/chengyujielong/play?q=%E4%B8%80%E5%B8%86%E9%A3%8E%E9%A1%BA'
-
-返回结果示例
-<!--<h3 id="-4">返回结果示例</h3>-->
-```
-{
-	"code": 0,
-	"msg": "成功",
-	"result": {
-		"isChengyu": true,
-		"isValidMatch": true,
-		"chengyuToMatch": "顺水推舟",
-		"explanation": "顺著水流的方向推船。比喻顺应情势行事。",
-		"lastPinyin": "zhou",
-		"score": 1,
-		"beatPercent": 1,
-		"totalNumUserSay": 1,
-		"prevChengyu": "顺水推舟"
-	}
-}
-```
-
-### 词语接龙 action 功能介绍
-所属领域服务：
-
-### 服务地址
-
-<pre>
-http://action.ruyi.ai/ciyujielong/play
-</pre>
-
-### 输入参数
-
-<ul>
-<li>注意，所有字符串参数需要 URL-encoded.</li>
-</ul>
-
-<table  class="table-responsive border">
-  <thead>
-    <tr>
-      <th>参数</th>
-      <th nowrap="nowrap">参数类型</th>
-      <th nowrap="nowrap">是否必须</th>
-      <th>含义</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-    <td>q</td>
-    <td>String</td>
-    <td>是</td>
-    <td>输入文本（词语)</td>
-   </tr>
-  </tbody>
-</table>
-
-
-
-### 服务调用示例
-curl 'http://action.ruyi.ai/ciyujielong/play?q=%E8%8B%B9%E6%9E%9C'
-
-返回结果示例
-<!--<h3 id="-4">返回结果示例</h3>-->
-```
-{
-	"code": 0,
-	"msg": "成功",
-	"result": {
-		"isCiyu": true,
-		"isValidMatch": true,
-		"ciyuToMatch": "果汁",
-		"score": 1,
-		"beatPercent": 1,
-		"totalNumUserSay": 1,
-		"prevCiyu": "果汁"
-	}
-}
-```
-
 ### 查天气 action 功能介绍
-所属领域服务：查询天气
+所属领域服务：查询天气v0.3
 
 ### 服务地址
 
@@ -569,76 +452,8 @@ curl 'http://lab.ruyi.ai/ruyi-action/weather2?city=%E4%B8%8A%E6%B5%B7&date=%E4%B
 }
 ```
 
-### 翻译 action 功能介绍
-所属领域服务：
-
-### 服务地址
-
-<pre>
-http://action.ruyi.ai/baidu/translate
-</pre>
-
-### 输入参数
-
-<ul>
-<li>注意，所有字符串参数需要 URL-encoded.</li>
-</ul>
-
-<table  class="table-responsive border">
-  <thead>
-    <tr>
-      <th>参数</th>
-      <th nowrap="nowrap">参数类型</th>
-      <th nowrap="nowrap">是否必须</th>
-      <th>含义</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-    <td>q</td>
-    <td>String</td>
-    <td>是</td>
-    <td>要翻译的内容</td>
-   </tr>
-   <tr>
-    <td>from</td>
-    <td>String</td>
-    <td>否</td>
-    <td>原文语种</td>
-   </tr>
-   <tr>
-    <td>to</td>
-    <td>String</td>
-    <td>否</td>
-    <td>译文语种</td>
-   </tr>
-  </tbody>
-</table>
-
-
-
-### 服务调用示例
-curl 'http://lab.ruyi.ai/ruyi-action/baidu/translate?q=I%20love%20you'
-
-返回结果示例
-<!--<h3 id="-4">返回结果示例</h3>-->
-```
-{
-	"code": 0,
-	"msg": "成功",
-	"result": {
-		"from": "en",
-		"to": "zh",
-		"trans_result": [{
-			"src": "I love you",
-			"dst": "我爱你"
-		}]
-	}
-}
-```
-
 ### 娱乐推送 action 功能介绍
-所属领域服务：娱乐推送
+所属领域服务：娱乐推送v0.2
 
 ### 服务地址
 
@@ -706,7 +521,7 @@ curl 'http://lab.ruyi.ai/ruyi-action/xxhh'
 ```
 
 ### 美图搜搜 action 功能介绍
-所属领域服务：美图搜搜
+所属领域服务：美图搜搜v0.2
 
 ### 服务地址
 
@@ -753,6 +568,303 @@ curl 'http://lab.ruyi.ai/ruyi-action/image/word?word=%E5%88%9D%E9%9F%B3'
 	"result": {
 		"image_url": "http://i1.17173.itc.cn/2011/news/2011/06/28/lj0628yxdgg08s.jpg",
 		"type": "image"
+	}
+}
+```
+
+### 黄历 action 功能介绍
+所属领域服务：查询黄历0.1
+
+### 服务地址
+
+<pre>
+http://test.shuoshuorili.com/smartv-box/laohuangli
+</pre>
+
+### 输入参数
+
+<ul>
+<li>注意，所有字符串参数需要 URL-encoded.</li>
+</ul>
+
+<table  class="table-responsive border">
+  <thead>
+    <tr>
+      <th>参数</th>
+      <th nowrap="nowrap">参数类型</th>
+      <th nowrap="nowrap">是否必须</th>
+      <th>含义</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <td>date</td>
+    <td>date（yyyy-mm-dd）</td>
+    <td>是</td>
+    <td>查询日期</td>
+   </tr>
+  </tbody>
+</table>
+
+
+
+### 服务调用示例
+curl 'http://test.shuoshuorili.com/smartv-box/laohuangli?date=2016-05-08'
+
+返回结果示例
+<!--<h3 id="-4">返回结果示例</h3>-->
+```
+{
+	"code": 0,
+	"msg": "成功",
+	"result": {
+		"yinli": "丙申(猴)年四月初二",
+		"yi": "解除 出行 纳采 冠笄 竖柱 上梁 移徙 作灶 进人口 入宅 纳畜 牧养",
+		"ji": "祭祀 伐木 架马 安床 修造 动土 安葬 修坟 破土",
+		"date": "2016-05-08"
+	}
+}
+```
+
+### 星座运势 action 功能介绍
+所属领域服务：星座运势0.1
+
+### 服务地址
+
+<pre>
+http://test.shuoshuorili.com/smartv-box/constellation
+</pre>
+
+### 输入参数
+
+<ul>
+<li>注意，所有字符串参数需要 URL-encoded.</li>
+</ul>
+
+<table  class="table-responsive border">
+  <thead>
+    <tr>
+      <th>参数</th>
+      <th nowrap="nowrap">参数类型</th>
+      <th nowrap="nowrap">是否必须</th>
+      <th>含义</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <td>name</td>
+    <td>string（yyyy-mm-dd）</td>
+    <td>是</td>
+    <td>星座名称</td>
+   </tr>
+  </tbody>
+</table>
+
+
+
+### 服务调用示例
+curl 'http://test.shuoshuorili.com/smartv-box/constellation?name=%E5%B0%84%E6%89%8B%E5%BA%A7'
+
+返回结果示例
+<!--<h3 id="-4">返回结果示例</h3>-->
+```
+{
+	"code": 0,
+	"msg": "成功",
+	"result": {
+		"name": "射手座",
+		"all": "40%",
+		"color": "黑色",
+		"number": 2,
+		"summary": "这个周末你感到略微有些不爽，与他人分享你的观点可能并不能获得认同，让你感到有一些挫败感，而你也容易在沟通中想到自己目前的瓶颈期，和能力上的不足。总之不要气馁，先安顿好自己私生活吧。",
+		"friend": "天秤座",
+		"date": "2016-05-08"
+	}
+}
+```
+
+
+### 成语接龙 action 功能介绍
+所属领域服务：
+
+### 服务地址
+
+<pre>
+http://action.ruyi.ai/chengyujielong/play
+</pre>
+
+### 输入参数
+
+<ul>
+<li>注意，所有字符串参数需要 URL-encoded.</li>
+</ul>
+
+<table  class="table-responsive border">
+  <thead>
+    <tr>
+      <th>参数</th>
+      <th nowrap="nowrap">参数类型</th>
+      <th nowrap="nowrap">是否必须</th>
+      <th>含义</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <td>q</td>
+    <td>String</td>
+    <td>是</td>
+    <td>输入文本（成语)</td>
+   </tr>
+  </tbody>
+</table>
+
+
+
+### 服务调用示例
+curl 'http://action.ruyi.ai/chengyujielong/play?q=%E4%B8%80%E5%B8%86%E9%A3%8E%E9%A1%BA'
+
+返回结果示例
+<!--<h3 id="-4">返回结果示例</h3>-->
+```
+{
+	"code": 0,
+	"msg": "成功",
+	"result": {
+		"isChengyu": true,
+		"isValidMatch": true,
+		"chengyuToMatch": "顺水推舟",
+		"explanation": "顺著水流的方向推船。比喻顺应情势行事。",
+		"lastPinyin": "zhou",
+		"score": 1,
+		"beatPercent": 1,
+		"totalNumUserSay": 1,
+		"prevChengyu": "顺水推舟"
+	}
+}
+```
+
+### 词语接龙 action 功能介绍
+所属领域服务：
+
+### 服务地址
+
+<pre>
+http://action.ruyi.ai/ciyujielong/play
+</pre>
+
+### 输入参数
+
+<ul>
+<li>注意，所有字符串参数需要 URL-encoded.</li>
+</ul>
+
+<table  class="table-responsive border">
+  <thead>
+    <tr>
+      <th>参数</th>
+      <th nowrap="nowrap">参数类型</th>
+      <th nowrap="nowrap">是否必须</th>
+      <th>含义</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <td>q</td>
+    <td>String</td>
+    <td>是</td>
+    <td>输入文本（词语)</td>
+   </tr>
+  </tbody>
+</table>
+
+
+
+### 服务调用示例
+curl 'http://action.ruyi.ai/ciyujielong/play?q=%E8%8B%B9%E6%9E%9C'
+
+返回结果示例
+<!--<h3 id="-4">返回结果示例</h3>-->
+```
+{
+	"code": 0,
+	"msg": "成功",
+	"result": {
+		"isCiyu": true,
+		"isValidMatch": true,
+		"ciyuToMatch": "果汁",
+		"score": 1,
+		"beatPercent": 1,
+		"totalNumUserSay": 1,
+		"prevCiyu": "果汁"
+	}
+}
+```
+
+
+### 翻译 action 功能介绍
+所属领域服务：
+
+### 服务地址
+
+<pre>
+http://action.ruyi.ai/baidu/translate
+</pre>
+
+### 输入参数
+
+<ul>
+<li>注意，所有字符串参数需要 URL-encoded.</li>
+</ul>
+
+<table  class="table-responsive border">
+  <thead>
+    <tr>
+      <th>参数</th>
+      <th nowrap="nowrap">参数类型</th>
+      <th nowrap="nowrap">是否必须</th>
+      <th>含义</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <td>q</td>
+    <td>String</td>
+    <td>是</td>
+    <td>要翻译的内容</td>
+   </tr>
+   <tr>
+    <td>from</td>
+    <td>String</td>
+    <td>否</td>
+    <td>原文语种</td>
+   </tr>
+   <tr>
+    <td>to</td>
+    <td>String</td>
+    <td>否</td>
+    <td>译文语种</td>
+   </tr>
+  </tbody>
+</table>
+
+
+
+### 服务调用示例
+curl 'http://lab.ruyi.ai/ruyi-action/baidu/translate?q=I%20love%20you'
+
+返回结果示例
+<!--<h3 id="-4">返回结果示例</h3>-->
+```
+{
+	"code": 0,
+	"msg": "成功",
+	"result": {
+		"from": "en",
+		"to": "zh",
+		"trans_result": [{
+			"src": "I love you",
+			"dst": "我爱你"
+		}]
 	}
 }
 ```
