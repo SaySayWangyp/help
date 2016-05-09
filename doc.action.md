@@ -653,7 +653,7 @@ http://test.shuoshuorili.com/smartv-box/constellation
   <tbody>
     <tr>
     <td>name</td>
-    <td>string（yyyy-mm-dd）</td>
+    <td>string</td>
     <td>是</td>
     <td>星座名称</td>
    </tr>
