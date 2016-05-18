@@ -145,7 +145,7 @@ http://action.ruyi.ai/weather2
     <td>查询日期</td>
    </tr>
    <tr>
-    <td>la</td>
+    <td>lat</td>
     <td>String</td>
     <td>否</td>
     <td>纬度</td>
