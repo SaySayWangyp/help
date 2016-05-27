@@ -108,12 +108,12 @@ curl 'http://action.ruyi.ai/xmly/search?q=%E7%BD%97%E8%BE%91%E6%80%9D%E7%BB%B4'
 ```
 
 ### 查天气 action 功能介绍
-所属领域服务：查询天气v0.3
+所属领域服务：查询天气v0.4
 
 ### 服务地址
 
 <pre>
-http://action.ruyi.ai/weather2
+http://api.ruyi.ai/ruyi-action/weather2
 </pre>
 
 ### 输入参数
@@ -135,14 +135,14 @@ http://action.ruyi.ai/weather2
     <tr>
     <td>location</td>
     <td>String</td>
-    <td>是</td>
-    <td>地理位置</td>
+    <td>否</td>
+    <td>地理位置（与经纬度至少有一个）</td>
    </tr>
    <tr>
     <td>date</td>
     <td>String</td>
     <td>否</td>
-    <td>查询日期</td>
+    <td>查询日期（格式"yyyy-MM-dd"，没有的话默认今天）</td>
    </tr>
    <tr>
     <td>lat</td>
@@ -156,13 +156,19 @@ http://action.ruyi.ai/weather2
     <td>否</td>
     <td>经度</td>
    </tr>
+   <tr>
+    <td>weatherEntity</td>
+    <td>String</td>
+    <td>否</td>
+    <td>天气实体（雨、雪、风、雾、伞、紫外线、羽绒服）</td>
+   </tr>
   </tbody>
 </table>
 
 
 
 ### 服务调用示例
-curl 'http://lab.ruyi.ai/ruyi-action/weather2?location=%E6%9C%9D%E9%98%B3&date=%E4%BB%8A%E5%A4%A9&lat=41.57&lon=120.45'
+curl 'http://api.ruyi.ai/ruyi-action/weather2?location=%E4%B8%8A%E6%B5%B7&weatherEntity=%E9%9B%A8'
 
 返回结果示例
 <!--<h3 id="-4">返回结果示例</h3>-->
@@ -171,283 +177,94 @@ curl 'http://lab.ruyi.ai/ruyi-action/weather2?location=%E6%9C%9D%E9%98%B3&date=%
 	"code": 0,
 	"msg": "成功",
 	"result": {
-		"basic": {
-			"city": "朝阳",
-			"cnty": "中国",
-			"id": "CN101071201",
-			"lat": "41.579000",
-			"lon": "120.456000",
-			"update": {
-				"loc": "2016-05-18 18:51",
-				"utc": "2016-05-18 10:51"
-			}
-		},
-		"daily_forecast": [{
-			"astro": {
-				"sr": "04:35",
-				"ss": "19:13"
-			},
-			"cond": {
-				"code_d": "100",
-				"code_n": "100",
-				"txt_d": "晴",
-				"txt_n": "晴"
-			},
-			"date": "2016-05-18",
-			"hum": "23",
-			"pcpn": "0.0",
-			"pop": "0",
-			"pres": "1011",
-			"tmp": {
-				"max": "31",
-				"min": "16"
-			},
-			"vis": "10",
-			"wind": {
-				"deg": "223",
-				"dir": "西南风",
-				"sc": "4-5",
-				"spd": "17"
-			}
-		}, {
-			"astro": {
-				"sr": "04:34",
-				"ss": "19:14"
-			},
-			"cond": {
-				"code_d": "101",
-				"code_n": "100",
-				"txt_d": "多云",
-				"txt_n": "晴"
-			},
-			"date": "2016-05-19",
-			"hum": "20",
-			"pcpn": "0.0",
-			"pop": "0",
-			"pres": "1013",
-			"tmp": {
-				"max": "31",
-				"min": "15"
-			},
-			"vis": "10",
-			"wind": {
-				"deg": "206",
-				"dir": "西南风",
-				"sc": "4-5",
-				"spd": "17"
-			}
-		}, {
-			"astro": {
-				"sr": "04:33",
-				"ss": "19:15"
-			},
-			"cond": {
-				"code_d": "100",
-				"code_n": "100",
-				"txt_d": "晴",
-				"txt_n": "晴"
-			},
-			"date": "2016-05-20",
-			"hum": "18",
-			"pcpn": "0.0",
-			"pop": "0",
-			"pres": "1014",
-			"tmp": {
-				"max": "30",
-				"min": "15"
-			},
-			"vis": "10",
-			"wind": {
-				"deg": "204",
-				"dir": "西南风",
-				"sc": "4-5",
-				"spd": "23"
-			}
-		}, {
-			"astro": {
-				"sr": "04:33",
-				"ss": "19:16"
-			},
-			"cond": {
-				"code_d": "100",
-				"code_n": "101",
-				"txt_d": "晴",
-				"txt_n": "多云"
-			},
-			"date": "2016-05-21",
-			"hum": "21",
-			"pcpn": "0.0",
-			"pop": "0",
-			"pres": "1016",
-			"tmp": {
-				"max": "30",
-				"min": "14"
-			},
-			"vis": "10",
-			"wind": {
-				"deg": "228",
-				"dir": "西南风",
-				"sc": "3-4",
-				"spd": "12"
-			}
-		}, {
-			"astro": {
-				"sr": "04:32",
-				"ss": "19:17"
-			},
-			"cond": {
-				"code_d": "101",
-				"code_n": "101",
-				"txt_d": "多云",
-				"txt_n": "多云"
-			},
-			"date": "2016-05-22",
-			"hum": "24",
-			"pcpn": "0.0",
-			"pop": "0",
-			"pres": "1019",
-			"tmp": {
-				"max": "28",
-				"min": "13"
-			},
-			"vis": "10",
-			"wind": {
-				"deg": "20",
-				"dir": "西南风",
-				"sc": "3-4",
-				"spd": "12"
-			}
-		}, {
-			"astro": {
-				"sr": "04:31",
-				"ss": "19:18"
-			},
-			"cond": {
-				"code_d": "101",
-				"code_n": "101",
-				"txt_d": "多云",
-				"txt_n": "多云"
-			},
-			"date": "2016-05-23",
-			"hum": "11",
-			"pcpn": "0.0",
-			"pop": "4",
-			"pres": "1015",
-			"tmp": {
-				"max": "27",
-				"min": "13"
-			},
-			"vis": "10",
-			"wind": {
-				"deg": "50",
-				"dir": "西北风",
-				"sc": "3-4",
-				"spd": "13"
-			}
-		}, {
-			"astro": {
-				"sr": "04:30",
-				"ss": "19:19"
-			},
-			"cond": {
-				"code_d": "101",
-				"code_n": "100",
-				"txt_d": "多云",
-				"txt_n": "晴"
-			},
-			"date": "2016-05-24",
-			"hum": "16",
-			"pcpn": "0.0",
-			"pop": "43",
-			"pres": "1006",
-			"tmp": {
-				"max": "27",
-				"min": "13"
-			},
-			"vis": "10",
-			"wind": {
-				"deg": "185",
-				"dir": "西风",
-				"sc": "3-4",
-				"spd": "11"
-			}
-		}],
-		"hourly_forecast": [{
-			"date": "2016-05-18 19:00",
-			"hum": "34",
-			"pop": "0",
-			"pres": "1012",
-			"tmp": "27",
-			"wind": {
-				"deg": "199",
-				"dir": "西南风",
-				"sc": "3-4",
-				"spd": "26"
-			}
-		}, {
-			"date": "2016-05-18 22:00",
-			"hum": "40",
-			"pop": "0",
-			"pres": "1014",
-			"tmp": "24",
-			"wind": {
-				"deg": "199",
-				"dir": "西南风",
-				"sc": "3-4",
-				"spd": "20"
-			}
-		}],
-		"now": {
-			"cond": {
-				"code": "100",
-				"txt": "晴"
-			},
-			"fl": "29",
-			"hum": "33",
-			"pcpn": "0",
-			"pres": "1011",
-			"tmp": "27",
-			"vis": "10",
-			"wind": {
-				"deg": "212",
-				"dir": "南风",
-				"sc": "6-7",
-				"spd": "40"
-			}
-		},
-		"status": "ok",
+		"month_day": "5月27日",
+		"week_day": "星期五",
 		"suggestion": {
 			"comf": {
-				"brf": "较舒适",
-				"txt": "白天天气晴好，您在这种天气条件下，会感觉早晚凉爽、舒适，午后偏热。"
+				"brf": "舒适",
+				"txt": "白天不太热也不太冷，风力不大，相信您在这样的天气条件下，应会感到比较清爽和舒适。"
 			},
 			"cw": {
-				"brf": "较不宜",
-				"txt": "较不宜洗车，未来一天无雨，风力较大，如果执意擦洗汽车，要做好蒙上污垢的心理准备。"
+				"brf": "不宜",
+				"txt": "不宜洗车，未来24小时内有雨，如果在此期间洗车，雨水和路上的泥水可能会再次弄脏您的爱车。"
 			},
 			"drsg": {
-				"brf": "热",
-				"txt": "天气热，建议着短裙、短裤、短薄外套、T恤等夏季服装。"
+				"brf": "较舒适",
+				"txt": "建议着薄外套、开衫牛仔衫裤等服装。年老体弱者应适当添加衣物，宜着夹克衫、薄毛衣等。"
 			},
 			"flu": {
-				"brf": "少发",
-				"txt": "各项气象条件适宜，发生感冒机率较低。但请避免长期处于空调房间中，以防感冒。"
+				"brf": "易发",
+				"txt": "相对于今天将会出现大幅度降温，空气湿度较大，易发生感冒，请注意适当增加衣服。"
 			},
 			"sport": {
 				"brf": "较不宜",
-				"txt": "天气较好，但风力很大，建议进行低强度的运动，户外运动时请注意防晒避风。"
+				"txt": "有较强降水，建议您选择在室内进行健身休闲运动。"
 			},
 			"trav": {
 				"brf": "一般",
-				"txt": "天空状况还是比较好的，温度稍高，但风大，对您的出行产生一定的影响。外出旅游请注意防风。"
+				"txt": "温度适宜，有微风同行，但较强降雨的天气将给您的出行带来很多的不便，若坚持旅行建议带上雨具。"
 			},
 			"uv": {
-				"brf": "中等",
-				"txt": "属中等强度紫外线辐射天气，外出时建议涂擦SPF高于15、PA+的防晒护肤品，戴帽子、太阳镜。"
+				"brf": "最弱",
+				"txt": "属弱紫外线辐射天气，无需特别防护。若长期在户外，建议涂擦SPF在8-12之间的防晒护肤品。"
 			}
 		},
-		"month_day": "",
-		"week_day": "星期三"
+		"aqi": {
+			"city": {
+				"aqi": "30",
+				"co": "1",
+				"no2": "43",
+				"o3": "77",
+				"pm10": "24",
+				"pm25": "21",
+				"qlty": "优",
+				"so2": "7"
+			}
+		},
+		"day_weather": {
+			"astro": {
+				"sr": "04:52",
+				"ss": "18:50"
+			},
+			"cond": {
+				"code_d": "306",
+				"code_n": "305",
+				"txt_d": "中雨",
+				"txt_n": "小雨"
+			},
+			"date": "2016-05-27",
+			"hum": "83",
+			"pcpn": "4.8",
+			"pop": "99",
+			"pres": "1010",
+			"tmp": {
+				"max": "22",
+				"min": "19"
+			},
+			"vis": "2",
+			"wind": {
+				"deg": "70",
+				"dir": "东北风",
+				"sc": "微风",
+				"spd": "5"
+			},
+			"condition": "中雨转小雨"
+		},
+		"speech": "会下的哦，记得要带伞呀",
+		"weatherEntity": "雨",
+		"is_weather": "yes",
+		"prov": "直辖市",
+		"basic": {
+			"city": "上海",
+			"cnty": "中国",
+			"id": "CN101020100",
+			"lat": "31.213000",
+			"lon": "121.445000",
+			"update": {
+				"loc": "2016-05-27 11:51",
+				"utc": "2016-05-27 03:51"
+			}
+		}
 	}
 }
 ```
@@ -1021,3 +838,213 @@ curl 'http://lab.ruyi.ai/ruyi-action/constellation/knowledge?constellation=%E6%B
 	}
 }
 ```
+
+### 随机笑话 action 功能介绍
+所属领域服务：
+
+### 服务地址
+
+<pre>
+http://api.ruyi.ai/ruyi-action/data/joke/random
+</pre>
+
+### 输入参数
+
+<ul>
+<li>注意，所有字符串参数需要 URL-encoded.</li>
+</ul>
+
+<table  class="table-responsive border">
+  <thead>
+    <tr>
+      <th>参数</th>
+      <th nowrap="nowrap">参数类型</th>
+      <th nowrap="nowrap">是否必须</th>
+      <th>含义</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+
+
+
+### 服务调用示例
+curl 'http://api.ruyi.ai/ruyi-action/data/joke/random'
+
+返回结果示例
+<!--<h3 id="-4">返回结果示例</h3>-->
+```
+{
+	"code": 0,
+	"msg": "成功",
+	"result": {
+		"text": "你喜欢我吗？”“你猜。”“喜欢！”“你再猜。”",
+		"id": "joke:366d84269886c557cb6b55a52b6f4109",
+		"tags": ["clean"],
+		"type": "text"
+	}
+}
+```
+
+### 随机图片 action 功能介绍
+所属领域服务：
+
+### 服务地址
+
+<pre>
+http://api.ruyi.ai/ruyi-action/data/image/random
+</pre>
+
+### 输入参数
+
+<ul>
+<li>注意，所有字符串参数需要 URL-encoded.</li>
+</ul>
+
+<table  class="table-responsive border">
+  <thead>
+    <tr>
+      <th>参数</th>
+      <th nowrap="nowrap">参数类型</th>
+      <th nowrap="nowrap">是否必须</th>
+      <th>含义</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+
+
+
+### 服务调用示例
+curl 'http://api.ruyi.ai/ruyi-action/data/image/random'
+
+返回结果示例
+<!--<h3 id="-4">返回结果示例</h3>-->
+```
+{
+	"code": 0,
+	"msg": "成功",
+	"result": {
+		"image_url": "https://dn-vbuluo-storage.qbox.me/Fil8cNinWf8shEf4921bB_qdFAQu/40269979_401.jpg\n",
+		"id": "image:04447f958e82ca70d23d0bc6b6614dc0",
+		"tags": ["image", "艺术"],
+		"type": "image"
+	}
+}
+```
+
+### 时间差 action 功能介绍
+所属领域服务：
+
+### 服务地址
+
+<pre>
+http://api.ruyi.ai/ruyi-action/time/diff
+</pre>
+
+### 输入参数
+
+<ul>
+<li>注意，所有字符串参数需要 URL-encoded.</li>
+</ul>
+
+<table  class="table-responsive border">
+  <thead>
+    <tr>
+      <th>参数</th>
+      <th nowrap="nowrap">参数类型</th>
+      <th nowrap="nowrap">是否必须</th>
+      <th>含义</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>time1</td>
+    <td>Long</td>
+    <td>否</td>
+    <td>第一个时间（UNIX毫秒数,没有的话默认当前时间）</td>
+   </tr>
+   <tr>
+    <td>time1</td>
+    <td>Long</td>
+    <td>否</td>
+    <td>第一个时间（UNIX毫秒数,没有的话默认当前时间）</td>
+   </tr>
+  </tbody>
+</table>
+
+
+
+### 服务调用示例
+curl 'http://api.ruyi.ai/ruyi-action/time/leapyear?time=12616151321'
+
+返回结果示例
+<!--<h3 id="-4">返回结果示例</h3>-->
+```
+{
+	"code": 0,
+	"msg": "成功",
+	"result": {
+		"leapyear": "no",
+		"pre_leapyear": 1968,
+		"next_leapyear": 1972
+	}
+}
+```
+
+### 判断闰年 action 功能介绍
+所属领域服务：
+
+### 服务地址
+
+<pre>
+http://api.ruyi.ai/ruyi-action/time/leapyear
+</pre>
+
+### 输入参数
+
+<ul>
+<li>注意，所有字符串参数需要 URL-encoded.</li>
+</ul>
+
+<table  class="table-responsive border">
+  <thead>
+    <tr>
+      <th>参数</th>
+      <th nowrap="nowrap">参数类型</th>
+      <th nowrap="nowrap">是否必须</th>
+      <th>含义</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>time</td>
+    <td>Long</td>
+    <td>否</td>
+    <td>需要判断的时间（UNIX毫秒数,没有的话默认当前时间）</td>
+   </tr>
+  </tbody>
+</table>
+
+
+
+### 服务调用示例
+curl 'http://api.ruyi.ai/ruyi-action/time/leapyear?time=12616151321'
+
+返回结果示例
+<!--<h3 id="-4">返回结果示例</h3>-->
+```
+{
+	"code": 0,
+	"msg": "成功",
+	"result": {
+		"leapyear": "no",
+		"pre_leapyear": 1968,
+		"next_leapyear": 1972
+	}
+}
+```
+
+
